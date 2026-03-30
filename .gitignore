@@ -1,0 +1,65 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# ========================
+# Credentials & Secrets
+# ========================
+.env
+*.json
+!package.json
+!tsconfig.json
+tokens_ig.json
+token.json
+token_youtube.json
+etlaadssheets-*.json
+google-ads.yaml
+credentials*.json
+
+# ========================
+# Data files (não versionar dados)
+# ========================
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.json
+*.pickle
+*.pkl
+scd2_*.parquet
+
+# ========================
+# IDE & OS
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ========================
+# Images & media
+# ========================
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
