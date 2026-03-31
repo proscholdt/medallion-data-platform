@@ -94,7 +94,6 @@ Built for real production workloads at **IT Valley**.
 | **Language** | Python 3.13 |
 | **DataFrames** | Polars, Pandas, PyArrow |
 | **Storage** | Azure Blob Storage, Delta Lake, Parquet |
-| **API** | FastAPI + Uvicorn |
 | **Extraction** | Requests, gspread (Google Sheets), OAuth2 |
 | **Orchestration** | Custom Python orchestrators (sequential pipeline) |
 | **Data Quality** | MD5 hashing (dedup), type enforcement, null filtering |
@@ -105,15 +104,10 @@ Built for real production workloads at **IT Valley**.
 ## Project Structure
 
 ```
-├── main.py                              # FastAPI application
 ├── Dockerfile                           # Container image
-├── docker-compose.yml                   # Services: api + etl
+├── docker-compose.yml                   # ETL service
 ├── requirements.txt                     # Python dependencies
 ├── .env.example                         # Environment variables template
-│
-├── api/                                 # REST API layer
-│   ├── pipedrive/
-│   └── facebook/
 │
 └── datamart/                            # ETL pipelines
     ├── 1_Orchestrator_General/          # Master orchestrator (runs all)
@@ -171,20 +165,12 @@ pip install -r requirements.txt
 ### Run with Docker
 
 ```bash
-# API server
-docker compose up api
-
-# Run full ETL pipeline
-docker compose --profile etl run etl
+docker compose run etl
 ```
 
 ### Run locally
 
 ```bash
-# API
-uvicorn main:app --host 0.0.0.0 --port 8000
-
-# Full ETL pipeline
 python datamart/1_Orchestrator_Gerneral/Orchestartor_General.py
 ```
 
