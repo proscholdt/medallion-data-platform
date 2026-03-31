@@ -10,7 +10,7 @@ orchestrators = [
     os.path.abspath(os.path.join("datamart","calls_Gabriel","Orschestrator","01_Orchestrator.py" )),
     os.path.abspath(os.path.join("datamart","hotmart_mastertech","Orchestrator_Master.py" )),
     os.path.abspath(os.path.join("datamart","voomp","Orchestrator_Master.py" )),
-    # os.path.abspath(os.path.join("datamart","pipedrive","Orchestrator_Master.py" )),
+    os.path.abspath(os.path.join("datamart","pipedrive","Orchestrator_master.py" )),
     os.path.abspath(os.path.join("datamart","moedas","moedas.py" ))
 ]
 
